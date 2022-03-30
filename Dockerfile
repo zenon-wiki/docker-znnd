@@ -11,6 +11,8 @@ FROM gcr.io/distroless/base
 COPY --from=build-env /go/bin/znnd /
 CMD ["/znnd"]
 
+VOLUME /root/.znn
+
 EXPOSE 35995/tcp
 EXPOSE 35995/udp
 EXPOSE 35997/tcp
